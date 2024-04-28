@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: black;
+            padding: 20px;
+            border: 3px solid red;
+            box-shadow: 0 0 20px red;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid red;
+            border-radius: 5px;
+            box-shadow: 0 0 10px red;
+            outline: none;
+            background-color: black; 
+            color: white;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px red;
+        }
+
+        button[type="submit"]:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Login To Vasita's Netflix View</h1>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{4,}" title="Username must be at least 4 characters long and can only contain alphanumeric characters"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern=".{6,}" title="Password must be at least 6 characters long"><br><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var usernamePattern = /[a-zA-Z0-9]{4,}/;
+        var passwordPattern = /.{6,}/;
+        if (usernamePattern.test(username) && passwordPattern.test(password)) {
+            window.location.href = "index2.html";
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    });
+</script>
+
+</body>
+</html>

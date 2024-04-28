@@ -1,0 +1,68 @@
+body {
+    background-color: #ffffff; /* Default background color for light mode */
+    color: #000000; /* Default text color for light mode */
+  }
+  a{
+    color: red;
+  }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000000;
+    }
+    
+    /* Make the video responsive */
+   
+    
+      #main-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:black; /* Change to your desired background color */
+      }
+    .firstpage{
+        height: 100vh;
+    }
+    .navbar-toggler-icon{
+        color: red; /* Set background color to red */
+        background-color: red;
+      }
+    .secondpage{
+        height: 100vh;
+    }
+    #page2{
+        height: 100vh;
+    }
+    #main-content {
+        height: 100vh; /* Set height to 100% of the viewport height */
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+      }
+    /* Adjust card height */
+    .card-img-top {
+        height: 200px; /* Set the height of the card image */
+        object-fit: cover; /* Ensure the image covers the entire space without stretching */
+      }
+  
+      /* Ensure consistency in card height */
+      .card {
+        height: 100%; /* Ensure all cards have the same height */
+      }
+      .logo{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+      }
+      .red-glowing-box {
+        color: red; /* Red with transparency */
+        padding: 20px;
+        margin-top: 50px; /* Adjust as needed */
+        box-shadow: 0 0 20px 0 red; /* Glowing effect */
+        width: 100%;
+      }
+      
